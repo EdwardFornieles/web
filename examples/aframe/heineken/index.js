@@ -14,7 +14,7 @@ AFRAME.registerComponent('artgalleryframe', {
     object3D.visible = false
 
     // Metadata comes to the primitive as a string, so we parse and destructure it
-    const {artist, date, title, wikiTitle} = JSON.parse(this.data.metadata)
+    //const {artist, date, title, wikiTitle} = JSON.parse(this.data.metadata)
 
     const frameEl = document.createElement('a-entity')
     frameEl.setAttribute('scale', '0.95 0.95 0.95')
@@ -27,7 +27,8 @@ AFRAME.registerComponent('artgalleryframe', {
 
     // Instantiate the element with information about the painting
     const infoDisplay = document.createElement('a-entity')
-    infoDisplay.setAttribute('info-display', {title, artist, date})
+//    infoDisplay.setAttribute('info-display', {title, artist, date})
+    infoDisplay.setAttribute('info-display', {"aa", "aa", "aa"})
     infoDisplay.object3D.position.set(0, this.data.rotated ? -0.4 : -0.5, 0.1)
     this.el.appendChild(infoDisplay)
 
