@@ -21,7 +21,7 @@ AFRAME.registerComponent('artgalleryframe', {
     frameEl.setAttribute('gltf-model', '#frame-model')
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
-      frameEl.setAttribute('rotation', '90 0 0')
+      frameEl.setAttribute('rotation', '0 90 0')
     }
     this.el.appendChild(frameEl)
 
