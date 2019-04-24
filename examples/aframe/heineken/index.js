@@ -19,9 +19,11 @@ AFRAME.registerComponent('artgalleryframe', {
     const frameEl = document.createElement('a-entity')
     frameEl.setAttribute('scale', '0.05 0.05 0.05')
     frameEl.setAttribute('gltf-model', '#frame-model')
+    frameEl.setAttribute('rotation', '-90 0 00')
+
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
-      frameEl.setAttribute('rotation', '0 90 0')
+      frameEl.setAttribute('rotation', '0 0 90')
     }
     this.el.appendChild(frameEl)
 
