@@ -17,11 +17,11 @@ AFRAME.registerComponent('artgalleryframe', {
     const {artist, date, title, wikiTitle} = JSON.parse(this.data.metadata)
 
     const frameEl = document.createElement('a-entity')
-    frameEl.setAttribute('scale', '0.1 0.1 0.1')
+    frameEl.setAttribute('scale', '0.05 0.05 0.05')
     frameEl.setAttribute('gltf-model', '#frame-model')
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
-      frameEl.setAttribute('rotation', '0 0 0')
+      frameEl.setAttribute('rotation', '90 0 0')
     }
     this.el.appendChild(frameEl)
 
