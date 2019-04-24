@@ -13,5 +13,5 @@ Example 8th Wall Web projects, by 3D framework
 | :----------: | :----------: | :----------: |
 | ![heineken-screenshot](./images/screenshot-heineken.jpg) | ![artgallery-screenshot](./images/screenshot-artgallery.jpg) | ![flyer-screenshot](./images/screenshot-flyer.jpg)
 | [Image targets for demo](./examples/aframe/heineken/heineken.jpg) | [Image targets for demo](./examples/aframe/artgallery/gallery.jpg) | [Image targets for demo](./examples/aframe/flyer/flyer.jpg)
-| [Try Demo (mobile)](https://apps.8thwall.com/8thWall/heineken) | [Try Demo (mobile)](https://apps.8thwall.com/8thWall/aframe_artgallery) | [Try Demo (mobile)](https://apps.8thwall.com/8thWall/aframe_flyer)
+| [Try Demo (mobile)](https://edwardfornieles.github.io/web/examples/aframe/heineken/index.html) | [Try Demo (mobile)](https://apps.8thwall.com/8thWall/aframe_artgallery) | [Try Demo (mobile)](https://apps.8thwall.com/8thWall/aframe_flyer)
 | or scan on phone:<br> ![QR1](./images/qr-heineken.png) | or scan on phone:<br> ![QR1](./images/qr-artgallery.png) | or scan on phone:<br> ![QR1](./images/qr-flyer.png)
