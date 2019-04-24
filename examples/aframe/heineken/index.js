@@ -18,7 +18,7 @@ AFRAME.registerComponent('artgalleryframe', {
 
     const frameEl = document.createElement('a-entity')
     frameEl.setAttribute('scale', '0.05 0.05 0.05')
-    frameEl.setAttribute('position', '0 -0.1 0')
+    frameEl.setAttribute('position', '0 -0.5 0')
     frameEl.setAttribute('gltf-model', '#frame-model')
     frameEl.setAttribute('rotation', '90 0 00')
 
