@@ -18,7 +18,7 @@ AFRAME.registerComponent('artgalleryframe', {
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
     frameEl.setAttribute('rotation', '90 0 00')
-    frameEl.setAttribute('animation-mixer', 'clip: *')
+    frameEl.setAttribute('animation-mixer', 'clip: *; loop: false')
 
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
