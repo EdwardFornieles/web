@@ -73,9 +73,9 @@ function showhide(flag) {
   var logo = document.getElementById('logo');
   if(flag) {
     console.log("hide");
-    logo.style.display === "none";
+    logo.style.display = "none";
   } else {
     console.log("show");
-    logo.style.display === "block";
+    logo.style.display = "block";
   }
 }
