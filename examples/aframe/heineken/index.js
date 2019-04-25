@@ -16,8 +16,9 @@ AFRAME.registerComponent('artgalleryframe', {
     const frameEl = document.createElement('a-entity')
     frameEl.setAttribute('scale', '1 1 1')
     frameEl.setAttribute('position', '0 0 0')
-    frameEl.setAttribute('gltf-model', '#frame-model')
+    frameEl.setAttribute('gltf-model', '#heineken')
     frameEl.setAttribute('rotation', '90 0 00')
+    frameEl.setAttribute('animation', 'property: object3D.position.y; from: 5; to: 0; dur: 4000; easing: easeOutCubic')
 
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
