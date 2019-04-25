@@ -37,6 +37,7 @@ AFRAME.registerComponent('artgalleryframe', {
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
+      alert(a1);
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
