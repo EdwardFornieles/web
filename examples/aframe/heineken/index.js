@@ -48,6 +48,7 @@ AFRAME.registerComponent('artgalleryframe', {
     this.el.addEventListener('xrimagelost', hideImage)
 
     console.log("loaded");
+    showhide(false);
   }
 })
 
@@ -71,10 +72,8 @@ function playSound() {
 function showhide(flag) {
   const logo = document.createElement('logo');
   if(flag) {
-    console.log("hide");
-    logo.classList.add("hide");
+    logo.style.display === "none";
   } else {
-    console.log("show");
-    logo.classList.remove("hide");
+    logo.style.display === "block";
   }
 }
