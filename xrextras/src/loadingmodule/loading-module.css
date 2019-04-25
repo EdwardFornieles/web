@@ -1,11 +1,13 @@
 #loadingContainer * {
   font-family: inherit;
   box-sizing: inherit;
+  background-color: black;
 }
 
 #loadingContainer {
   z-index: 800;
   font-family: 'Varela-Round', sans-serif;
+  background-color: black;
 }
 
 .absolute-fill {
