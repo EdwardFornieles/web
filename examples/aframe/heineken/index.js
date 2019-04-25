@@ -70,7 +70,7 @@ function playSound() {
     sound.play();
 }
 function showhide(flag) {
-  const logo = document.getElementById('logo');
+  var logo = document.getElementById('logo');
   if(flag) {
     console.log("hide");
     logo.style.display === "none";
