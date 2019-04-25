@@ -24,7 +24,7 @@ AFRAME.registerComponent('artgalleryframe', {
     }
     this.el.appendChild(frameEl)
 
-//    var oldPos = getPosition(frameEl);
+    var oldPos = 0;
 
     // showImage handles displaying and moving the virtual object to match the image
     const showImage = ({detail}) => {
@@ -32,7 +32,11 @@ AFRAME.registerComponent('artgalleryframe', {
 
 //      var a1 = oldPos.x - object3D.position.x;
       object3D.position.copy(detail.position)
-//      object3D.quaternion.copy(detail.rotation)
+      if(oldPos == 0)
+      {
+        object3D.quaternion.copy(detail.rotation)
+        oldPos = 1;
+      }
       object3D.scale.set(detail.scale, detail.scale, detail.scale)
       object3D.visible = true
       playSound();
@@ -44,6 +48,7 @@ AFRAME.registerComponent('artgalleryframe', {
     const hideImage = () => {
       object3D.visible = false
       showhide(false, 'logo');
+      oldPos = 0;
     }
 
     // These events are routed and dispatched by xrextras-generate-image-targets
