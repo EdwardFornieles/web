@@ -18,7 +18,6 @@ AFRAME.registerComponent('artgalleryframe', {
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
     frameEl.setAttribute('rotation', '90 0 00')
-    frameEl.setAttribute('animation', 'property: object3D.position.y; from: 5; to: 0; dur: 4000; easing: easeOutCubic')
 
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
@@ -35,6 +34,7 @@ AFRAME.registerComponent('artgalleryframe', {
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
+      alert("DETECTED");
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
