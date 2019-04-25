@@ -28,7 +28,7 @@ AFRAME.registerComponent('artgalleryframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
       object3D.position.copy(detail.position)
-      object3D.quaternion.copy(detail.rotation)
+//      object3D.quaternion.copy(detail.rotation)
       object3D.scale.set(detail.scale, detail.scale, detail.scale)
       object3D.visible = true
       playSound();
