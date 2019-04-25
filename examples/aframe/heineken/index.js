@@ -24,7 +24,7 @@ AFRAME.registerComponent('artgalleryframe', {
     }
     this.el.appendChild(frameEl)
 
-    var oldPos = getPosition(frameEl);
+//    var oldPos = getPosition(frameEl);
 
     // showImage handles displaying and moving the virtual object to match the image
     const showImage = ({detail}) => {
