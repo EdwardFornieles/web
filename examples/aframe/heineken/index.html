@@ -31,13 +31,7 @@
     xrextras-runtime-error>
 
     <a-assets>
-      <a-asset-item id="heineken" src="heineken.glb"></a-asset-item>
-      <a-mixin
-          id="heineken"
-          animation="property: object3D.position.y; to: 0; dur: 800; easing: easeOutCubic"
-          event-set__loaded="visible: true; _delay: 100"
-          gltf-model="#heineken"
-          visible="false"></a-mixin>
+      <a-asset-item id="heineken" src="heineken.glb" animation-mixer></a-asset-item>
       </a-assets>
     </a-assets>
 
