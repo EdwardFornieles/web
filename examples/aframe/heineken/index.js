@@ -30,14 +30,14 @@ AFRAME.registerComponent('artgalleryframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
-      var a1 = oldPos.x - object3D.position.x;
+//      var a1 = oldPos.x - object3D.position.x;
       object3D.position.copy(detail.position)
 //      object3D.quaternion.copy(detail.rotation)
       object3D.scale.set(detail.scale, detail.scale, detail.scale)
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
-      alert(a1);
+//      alert(a1);
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
