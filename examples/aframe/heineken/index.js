@@ -18,7 +18,6 @@ AFRAME.registerComponent('artgalleryframe', {
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
     frameEl.setAttribute('rotation', '90 0 00')
-    frameEl.setAttribute('mixin', 'heineken')
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
       frameEl.setAttribute('rotation', '0 90 90')
@@ -29,7 +28,7 @@ AFRAME.registerComponent('artgalleryframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
       object3D.position.copy(detail.position)
-//      object3D.quaternion.copy(detail.rotation)
+      object3D.quaternion.copy(detail.rotation)
       object3D.scale.set(detail.scale, detail.scale, detail.scale)
       object3D.visible = true
       playSound();
