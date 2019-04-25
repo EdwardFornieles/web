@@ -34,8 +34,10 @@
   text-align: center;
   color: white;
   font-size: 3.7vh;
-  background-color: #7611B7;
+  /*background-color: #7611B7;*/
+  background-color: white;
   padding: 3vh 0;
+  display: none;
 }
 
 #requestingCameraIcon {
