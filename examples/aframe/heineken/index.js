@@ -46,6 +46,8 @@ AFRAME.registerComponent('artgalleryframe', {
     this.el.addEventListener('xrimagefound', showImage)
     this.el.addEventListener('xrimageupdated', showImage)
     this.el.addEventListener('xrimagelost', hideImage)
+
+    console.log("loaded");
   }
 })
 
@@ -67,10 +69,10 @@ function playSound() {
     sound.play();
 }
 function showhide(flag) {
+  const logo = document.createElement('logo');
   if(flag) {
-    const logo = document.createElement('logo');
-    logo.classList.add("hide");
-  } else {
     logo.classList.remove("hide");
+  } else {
+    logo.classList.add("hide");
   }
 }
