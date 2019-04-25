@@ -32,6 +32,7 @@ AFRAME.registerComponent('artgalleryframe', {
       object3D.quaternion.copy(detail.rotation)
       object3D.scale.set(detail.scale, detail.scale, detail.scale)
       object3D.visible = true
+      playSound();
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
@@ -58,3 +59,8 @@ AFRAME.registerPrimitive('artgallery-frame', {
     metadata: 'artgalleryframe.metadata',
   }
 })
+
+function playSound() {
+    var sound = document.getElementById("audio");
+    sound.play();
+}
