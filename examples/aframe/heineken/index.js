@@ -33,13 +33,13 @@ AFRAME.registerComponent('artgalleryframe', {
       object3D.scale.set(detail.scale, detail.scale, detail.scale)
       object3D.visible = true
       playSound();
-      showhide(true);
+      showhide(true, 'logo');
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
     const hideImage = () => {
       object3D.visible = false
-      showhide(false);
+      showhide(false, 'logo');
     }
 
     // These events are routed and dispatched by xrextras-generate-image-targets
@@ -48,7 +48,8 @@ AFRAME.registerComponent('artgalleryframe', {
     this.el.addEventListener('xrimagelost', hideImage)
 
     console.log("loaded");
-    showhide(false);
+    showhide(false, 'logo');
+    showhide(false, 'photo');
   }
 })
 
@@ -69,13 +70,14 @@ function playSound() {
     var sound = document.getElementById("audio");
     sound.play();
 }
-function showhide(flag) {
-  var logo = document.getElementById('logo');
+function showhide(flag, _id) {
+  var logo = document.getElementById(_id);
   if(flag) {
-    console.log("hide");
     logo.style.display = "none";
   } else {
-    console.log("show");
     logo.style.display = "block";
   }
+}
+function takePhoto() {
+  alert("clicked photo image");
 }

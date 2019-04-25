@@ -53,6 +53,12 @@
   top: 50%;
   margin-top: -100px;
 }
-.logo.hide{
-  display: none;
+.photo{
+  z-index: 999;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  bottom: 0%;
 }
