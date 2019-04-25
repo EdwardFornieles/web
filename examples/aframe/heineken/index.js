@@ -24,12 +24,16 @@ AFRAME.registerComponent('artgalleryframe', {
     }
     this.el.appendChild(frameEl)
 
+    var oldPos = getPosition(frameEl);
+
     // showImage handles displaying and moving the virtual object to match the image
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
+
+      var a1 = oldPos.x - object3D.position.x;
       object3D.position.copy(detail.position)
 //      object3D.quaternion.copy(detail.rotation)
-//      object3D.scale.set(detail.scale, detail.scale, detail.scale)
+      object3D.scale.set(detail.scale, detail.scale, detail.scale)
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
