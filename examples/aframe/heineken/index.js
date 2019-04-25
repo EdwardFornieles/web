@@ -17,8 +17,8 @@ AFRAME.registerComponent('artgalleryframe', {
     const {artist, date, title, wikiTitle} = JSON.parse(this.data.metadata)
 
     const frameEl = document.createElement('a-entity')
-    frameEl.setAttribute('scale', '0.05 0.05 0.05')
-    frameEl.setAttribute('position', '0 -0.25 0')
+    frameEl.setAttribute('scale', '1 1 1')
+    frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('gltf-model', '#frame-model')
     frameEl.setAttribute('rotation', '90 0 00')
 
