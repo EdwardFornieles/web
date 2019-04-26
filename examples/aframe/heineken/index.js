@@ -13,7 +13,8 @@ AFRAME.registerComponent('heinekenframe', {
     // Hide the image target until it is found
     object3D.visible = false
 
-    const frameEl = document.createElement('a-entity')
+//    const frameEl = document.createElement('a-entity')    
+    const frameEl = document.getElementById('heineken');
     frameEl.setAttribute('scale', '1 1 1')
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
