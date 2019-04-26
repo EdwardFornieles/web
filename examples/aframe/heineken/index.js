@@ -14,6 +14,7 @@ AFRAME.registerComponent('heinekenframe', {
     object3D.visible = false
 
     const frameEl = document.createElement('a-entity')    
+    frameEl.setAttribute('gltf-model', '#heineken')
     frameEl.setAttribute('scale', '1 1 1')
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('rotation', '90 0 0')
