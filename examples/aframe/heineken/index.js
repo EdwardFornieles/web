@@ -1,4 +1,4 @@
-AFRAME.registerComponent('artgalleryframe', {
+AFRAME.registerComponent('heinekenframe', {
   schema: {
     name: {type: 'string'},
     rotated: {type: 'bool'},
@@ -18,7 +18,7 @@ AFRAME.registerComponent('artgalleryframe', {
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
     frameEl.setAttribute('rotation', '90 0 00')
-    frameEl.setAttribute('animation', 'clip: *')
+//    frameEl.setAttribute('animation', 'clip: *')
     frameEl.setAttribute('geometry', 'primitive: box')
     frameEl.setAttribute('material', 'src: #hnkmap01')
 
@@ -67,15 +67,15 @@ AFRAME.registerComponent('artgalleryframe', {
 })
 
 // xrextras-generate-image-targets uses this primitive to automatically populate multiple image targets
-AFRAME.registerPrimitive('artgallery-frame', {
+AFRAME.registerPrimitive('heineken-frame', {
   defaultComponents: {
-    artgalleryframe: {},
+    heinekenframe: {},
   },
 
   mappings: {
-    name: 'artgalleryframe.name',
-    rotated: 'artgalleryframe.rotated',
-    metadata: 'artgalleryframe.metadata',
+    name: 'heinekenframe.name',
+    rotated: 'heinekenframe.rotated',
+    metadata: 'heinekenframe.metadata',
   }
 })
 

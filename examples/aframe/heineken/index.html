@@ -27,26 +27,23 @@
   <a-scene
     renderer="antialias: true; gammaOutput: true; physicallyCorrectLights: true;"
     xrweb="disableWorldTracking: true"
-    xrextras-generate-image-targets="primitive: artgallery-frame"
+    xrextras-generate-image-targets="primitive: heineken-frame"
     xrextras-almost-there
     xrextras-loading
     xrextras-runtime-error>
 
     <a-assets>
-      <img id="hnkmap01" src="//edwardfornieles.github.io/web/examples/aframe/heineken/assets/tacaAO1024.jpg">
-    </a-assets>
-
-    <a-assets>
-      <a-asset-item id="heineken" src="heineken.glb"></a-asset-item>
+      <a-asset-item id="heineken" src="heineken.glb" geometry="primitive: box" material="src: #hnkmap01"></a-asset-item>
+      <img id="hnkmap01" src="assets/tacaAO1024.jpg">
     </a-assets>
 
     <a-camera id="camera" position="0 4 10"
       raycaster="objects: .cantap"
       cursor="fuse:false; rayOrigin:mouse;">
     </a-camera>
-    <a-light type="ambient" intensity="1.3"></a-light>
+<!--     <a-light type="ambient" intensity="1.3"></a-light>
     <a-light type="directional" intensity="3" position="1.5 2.5 0.6"></a-light>
-  </a-scene>
+ -->  </a-scene>
 
   <audio id="audio" autoplay="false">
     <source src="assets/Uefa.mp3" type="audio/mp3" >
