@@ -18,8 +18,7 @@ AFRAME.registerComponent('artgalleryframe', {
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
     frameEl.setAttribute('rotation', '90 0 00')
-    frameEl.setAttribute('animation-mixer', 'clip: *')
-    frameEl.setAttribute('animation', 'loop: false')
+    frameEl.setAttribute('animation', 'clip: *')
     frameEl.setAttribute('geometry', 'primitive: box')
     frameEl.setAttribute('material', 'src: #hnkmap01')
 
