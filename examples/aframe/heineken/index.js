@@ -17,7 +17,7 @@ AFRAME.registerComponent('heinekenframe', {
     const frameEl = document.getElementById('#heinekenModel');
     frameEl.setAttribute('scale', '1 1 1')
     frameEl.setAttribute('position', '0 0 0')
-    frameEl.setAttribute('rotation', '90 0 00')
+    frameEl.setAttribute('rotation', '90 0 0')
 //    frameEl.setAttribute('animation', 'clip: *')
     frameEl.setAttribute('geometry', 'primitive: box')
     frameEl.setAttribute('material', 'src: #hnkmap01')
