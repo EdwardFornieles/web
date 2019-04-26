@@ -34,7 +34,6 @@ AFRAME.registerComponent('heinekenframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
-//      var a1 = oldPos.x - object3D.position.x;
       object3D.position.copy(detail.position)
       if(oldPos == 0)
       {
@@ -45,7 +44,6 @@ AFRAME.registerComponent('heinekenframe', {
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
-//      alert(a1);
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
