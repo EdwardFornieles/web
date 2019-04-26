@@ -25,12 +25,16 @@
 
 <body>
   <a-scene
-    renderer="antialias: true; gammaOutput: true; physicallyCorrectLights: true; environment: Sky"
+    renderer="antialias: true; gammaOutput: true; physicallyCorrectLights: true;"
     xrweb="disableWorldTracking: true"
     xrextras-generate-image-targets="primitive: artgallery-frame"
     xrextras-almost-there
     xrextras-loading
     xrextras-runtime-error>
+
+    <a-assets>
+      <img id="hnkmap01" src="//edwardfornieles.github.io/web/examples/aframe/heineken/assets/tacaAO1024.jpg">
+    </a-assets>
 
     <a-assets>
       <a-asset-item id="heineken" src="heineken.glb" animation-mixer="clip: *;"></a-asset-item>
