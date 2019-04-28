@@ -15,7 +15,7 @@ AFRAME.registerComponent('heinekenframe', {
 
     const frameEl = document.createElement('a-entity')    
     frameEl.setAttribute('gltf-model', '#heineken')
-    frameEl.setAttribute('scale', '0.01 0.01 0.01')
+    frameEl.setAttribute('scale', '0.1 0.1 0.1')
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('rotation', '90 0 0')
 //    frameEl.setAttribute('animation', 'clip: *')
