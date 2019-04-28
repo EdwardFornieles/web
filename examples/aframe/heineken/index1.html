@@ -17,6 +17,7 @@
 <!--   <script src="//ar.buudigital.com.br/xrextras/src/xrextras.js"></script> -->
 
 <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
 
   <!-- 8thWall Web - Replace the app key here with your own app key -->
   <script
@@ -43,6 +44,14 @@
       <img id="normal" src="a-frame-assets/tacaNormal1024.jpg" />
 
       <a-asset-item id="heineken" src="heineken.glb"></a-asset-item>
+
+      <!-- Cubemap Assets -->
+        <img src="cubemap/posx.jpg">
+        <img src="cubemap/posy.jpg">
+        <img src="cubemap/posz.jpg">
+        <img src="cubemap/negx.jpg">
+        <img src="cubemap/negy.jpg">
+        <img src="cubemap/negz.jpg">
     </a-assets>
 
     <a-camera id="camera" position="0 4 10"
@@ -53,7 +62,7 @@
 <!--     <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
     <a-light type="ambient" intensity="1"></a-light> -->
   <a-entity light position="1 1 1"></a-entity>
-  <a-entity light="type: ambient; intensity: 0.2;"></a-entity>
+  <a-entity light="type: ambient; intensity: 0.4;"></a-entity>
 
     </a-scene>
 

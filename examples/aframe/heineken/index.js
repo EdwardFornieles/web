@@ -18,6 +18,8 @@ AFRAME.registerComponent('heinekenframe', {
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('rotation', '90 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
+    frameEl.setAttribute('cube-env-map', 'path: cubemap/; extension: jpg;')
+
 //    frameEl.setAttribute('animation', 'clip: *')
     frameEl.setAttribute('material', 'color: lightpink; metalness:0.8; roughness:0.3; sphericalEnvMap: #sky; envMapIntensity: 1.0; normalMap: #normal; normalScale: 1 -1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 2.436143; displacementBias: -0.428408;')
 
