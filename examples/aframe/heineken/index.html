@@ -41,7 +41,7 @@
       <img id="ao" src="a-frame-assets/tacaColor1024.jpg" />
       <img id="displacement" src="a-frame-assets/tacaMettalic1024.jpg" />
       <img id="normal" src="a-frame-assets/tacaNormal1024.jpg" />
-      
+
       <a-asset-item id="heineken" src="heineken.glb"></a-asset-item>
     </a-assets>
 
@@ -50,9 +50,11 @@
       cursor="fuse:false; rayOrigin:mouse;">
     </a-camera>
 
-    <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
-    <a-light type="ambient" intensity="1"></a-light>
-
+<!--     <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
+    <a-light type="ambient" intensity="1"></a-light> -->
+  <a-entity light position="1 1 1"></a-entity>
+  <a-entity light="type: ambient; intensity: 0.5;"></a-entity>
+  
     </a-scene>
 
   <audio id="audio" autoplay="false">
