@@ -26,7 +26,7 @@
 	<!-- Assets -->
 
 	<a-assets>
-		<img id="sky" src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/https://samsunginternet.github.io/a-frame-demos/a-frame-assets/sky/CGSkies_0347_free.jpg" />
+		<img id="sky" src="a-frame-assets/sky/sky1.jpg" />
 
 		<img id="ao" src="a-frame-assets/ninja/ao.jpg" />
 		<img id="displacement" src="a-frame-assets/ninja/displacement.jpg" />
@@ -44,6 +44,12 @@
 			scale="0.15 0.15 0.15"
 			material="color: lightpink; metalness:0.8; roughness:0.3; sphericalEnvMap: #sky; envMapIntensity: 1.0; normalMap: #normal; normalScale: 1 -1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 2.436143; displacementBias: -0.428408;"
 			bin-model="#ninja-model-js"
+		></a-entity>
+
+		<a-entity
+			geometry="primitive: torusKnot;"
+			position="2 0 0"
+			material="color: lightpink; metalness:0.8; roughness:0.2; sphericalEnvMap: #sky;"
 		></a-entity>
 	</a-entity>
 </a-scene>
