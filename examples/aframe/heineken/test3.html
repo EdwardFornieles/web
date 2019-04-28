@@ -39,17 +39,14 @@
 	<a-assets>
 		<img id="sky" src="a-frame-assets/sky01.jpg" />
 
-<!-- 		<img id="ao" src="a-frame-assets/tacaColor1024.jpg" />
+		<img id="ao" src="a-frame-assets/tacaColor1024.jpg" />
 		<img id="displacement" src="a-frame-assets/tacaMettalic1024.jpg" />
 		<img id="normal" src="a-frame-assets/tacaNormal1024.jpg" />
- -->
-		<img id="ao" src="a-frame-assets/ao.jpg" />
-		<img id="displacement" src="a-frame-assets/displacement.jpg" />
-		<img id="normal" src="a-frame-assets/normal.jpg" />
 
 		<a-asset-item id="heineken" src="heineken3.glb"></a-asset-item>
 
-		<a-asset-item id="tree-obj" src="a-frame-assets/ninjaHead_Low.obj"></a-asset-item>
+		<a-asset-item id="tree-obj" src="a-frame-assets/taca.obj"></a-asset-item>
+    	<a-asset-item id="tree-mtl" src="a-frame-assets/taca.mtl"></a-asset-item>
 
 	</a-assets>
 
@@ -59,9 +56,9 @@
 	<a-entity position="0 -0.5 -5">
 		<a-entity xrextras-one-finger-rotate
 			position="0 0 0"
-			scale="5 5 5"
-			material="metalness:0.8; roughness:0.3; envMap: #sky; normalMap: #normal; normalScale: 1 -1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 2.436143; displacementBias: -0.428408;"
-			gltf-model="#heineken" 
+			scale="0.2 0.2 0.2"
+			material="metalness:0.8; roughness:0.3; sphericalEnvMap: #sky; normalMap: #normal; normalScale: 1 -1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 2.436143; displacementBias: -0.428408;"
+			obj-model="obj: #tree-obj; mtl: #tree-mtl"
 		></a-entity>
 </a-entity>
 </a-scene>
