@@ -43,15 +43,35 @@
   float: right;
   padding: 0.25em;
 }
+#topo{
+  position: relative;
+}
+.logoTop{
+  z-index: 999;
+  position: absolute;
+  top: 20px;
+  width: 140px;
+  left: 50%;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
 .logo{
   z-index: 999;
-  height: 200px;
-  width: 200px;
   position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  top: 50%;
-  margin-top: -100px;
+  height: 320px;
+  width: 320px;  
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50)
 }
 .photo{
   z-index: 999;

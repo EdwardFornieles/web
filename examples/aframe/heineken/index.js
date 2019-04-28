@@ -39,19 +39,21 @@ AFRAME.registerComponent('heinekenframe', {
       if(oldPos == 0)
       {
         object3D.quaternion.copy(detail.rotation)
-        object3D.scale.set(detail.scale / 5.5, detail.scale / 5.5, detail.scale / 5.5)
+        object3D.scale.set(detail.scale / 10.0, detail.scale / 10.0, detail.scale / 10.0)
         oldPos = 1;
       }
 
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
+      showhide(true, 'logoTop');
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
     const hideImage = () => {
       object3D.visible = false
       showhide(false, 'logo');
+      showhide(false, 'logoTop');
       oldPos = 0;
     }
 
@@ -62,6 +64,7 @@ AFRAME.registerComponent('heinekenframe', {
 
     console.log("loaded");
     showhide(false, 'logo');
+    showhide(false, 'logoTop');
     showhide(false, 'photo');
   }
 })
