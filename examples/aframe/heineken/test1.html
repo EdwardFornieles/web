@@ -64,56 +64,7 @@
 			material="color: lightpink; metalness:0.8; roughness:0.3; sphericalEnvMap: #sky; envMapIntensity: 1.0; normalMap: #normal; normalScale: 1 -1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 2.436143; displacementBias: -0.428408;"
 			gltf-model = "#heineken"
 		></a-entity>
-<!-- 
-		<a-entity
-			geometry="primitive: box;"
-			position="2 0 0"
-			material="color: lightpink; metalness:0.8; roughness:0.2; sphericalEnvMap: #sky;"
-			gltf-model = "#heineken"
-		></a-entity>
-
- -->	</a-entity>
+</a-entity>
 </a-scene>
-
-<!-- Pay no attention to that man behind the curtain -->
-<!-- This script is just loading the demo model from the THREE.js examples -->
-
-<script>
-
-AFRAME.registerComponent('bin-model', {
-
-	dependencies: ['material'],
-
-	schema: {
-		type: 'src'
-	},
-
-	init: function () {
-		this.loader = new THREE.BinaryLoader();
-		this.el.getOrCreateObject3D('mesh', THREE.Mesh);
-	},
-
-	update: function () {
-		var url = this.data;
-		var self = this;
-		var el = this.el;
-
-		if (!url) { return; }
-
-		this.loader.load( url, function( geometry ) {
-			var mesh = el.getObject3D('mesh');
-			geometry.faceVertexUvs[ 1 ] = geometry.faceVertexUvs[ 0 ]; // 2nd set of UVs required for aoMap
-			mesh.geometry = geometry;
-			mesh.material = el.components.material.material;
-			el.emit('model-loaded', {format: 'bin', model: mesh});
-		} );
-	},
-
-	remove: function () {
-		if (this.getObject3D('mesh')) this.el.removeObject3D('mesh');
-	}
-});
-</script>
-
-	</body>
+</body>
 </html>
