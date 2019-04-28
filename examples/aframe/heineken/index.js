@@ -39,7 +39,7 @@ AFRAME.registerComponent('heinekenframe', {
       if(oldPos == 0)
       {
         object3D.quaternion.copy(detail.rotation)
-        object3D.scale.set(detail.scale / 5.0, detail.scale / 5.0, detail.scale / 5.0)
+        object3D.scale.set(detail.scale / 4.0, detail.scale / 4.0, detail.scale / 4.0)
         oldPos = 1;
       }
 
