@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <title>heineken AR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+<!--   <script src="require.js"></script> -->
+
+  <!-- We've included a slightly modified version of A-Frame, which fixes some polish concerns -->
+  <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
+
+  <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
+         See github.com/8thwall/web/xrextras -->
+  <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+
+<!--   <script src="//ar.buudigital.com.br/xrextras/src/xrextras.js"></script> -->
+
+<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+
+  <!-- 8thWall Web - Replace the app key here with your own app key -->
+  <script
+    src="//apps.8thwall.com/xrweb?appKey=qmKKyWKggHcjmoNObb78qpWpXHEnzZQyTP73VT0qWDiN18TFJfSJh0pm0ccyZJaFRn0ASg"></script>
+
+  <!-- client code -->
+  <script src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+  <a-scene
+    renderer="antialias: true"
+    xrweb="disableWorldTracking: true"
+    xrextras-generate-image-targets="primitive: heineken-frame"
+    xrextras-almost-there
+    xrextras-loading
+    xrextras-runtime-error>
+
+    <a-assets>
+      <a-asset-item id="heineken" src="heineken.glb"></a-asset-item>
+    </a-assets>
+
+    <a-camera id="camera" position="0 4 10"
+      raycaster="objects: .cantap"
+      cursor="fuse:false; rayOrigin:mouse;">
+    </a-camera>
+
+    <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
+    <a-light type="ambient" intensity="1"></a-light>
+
+    </a-scene>
+
+  <audio id="audio" autoplay="false">
+    <source src="assets/Uefa.mp3" type="audio/mp3" >
+      <source src="assets/Uefa.ogg" type="audio/ogg" >
+  </audio>
+  <img src="assets/Logo.png" id="logo" alt="Logo" class="logo" style="display: none;">
+  <img src="assets/Photo.png" id="photo" alt="Photo" class="photo" style="display: none;" onclick="takePhoto()">
+
+  <!-- ---------------- Custom Shader Code ------------------------ -->
+  <script id="vertexShader" type="x-shader/x-vertex">
+    uniform float refractionRatio;
+    varying vec3 vRefract;
+    void main() 
+    { 
+      vec4 mPosition = modelMatrix * vec4( position, 1.0 );
+      vec3 nWorld = normalize( mat3( modelMatrix[0].xyz, modelMatrix[1].xyz, modelMatrix[2].xyz ) * normal );
+      vRefract = normalize( refract( normalize( mPosition.xyz - cameraPosition ), nWorld, refractionRatio ) );
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    }
+  </script>
+
+  <script id="fragmentShader" type="x-shader/x-vertex"> 
+    uniform sampler2D texture;
+    varying vec3 vRefract;
+    uniform float distance;
+    uniform float opacity;
+    uniform vec3 tint;
+    void main() 
+    {
+      vec2 p = vec2( vRefract.x * distance + 0.5, vRefract.y * distance + 0.5 );
+      p = vec2(1.0, 1.0) - p;
+      vec3 color = texture2D( texture, p ).rgb;
+      gl_FragColor = vec4( color, opacity ) * vec4( tint, 1.0 );
+    }  
+  </script>
+</body>
+</html>
