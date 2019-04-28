@@ -32,6 +32,7 @@
 		<img id="displacement" src="a-frame-assets/ninja/displacement.jpg" />
 		<img id="normal" src="a-frame-assets/ninja/normal.jpg" />
 		<a-asset-item id="ninja-model-js" src="a-frame-assets/ninja/NinjaLo_bin.js"></a-asset-item>
+		<a-asset-item id="heineken" src="heineken.glb"></a-asset-item>
 
 	</a-assets>
 
@@ -39,12 +40,19 @@
 	<a-entity light="type: ambient; intensity: 0.1;"></a-entity>
 
 	<a-entity look-controls position="0 1 -5">
-		<a-asset-item id="heineken" src="heineken.glb"></a-asset-item>
 		<a-entity
+			position="-2 0 0"
+			scale="0.15 0.15 0.15"
+			material="color: lightpink; metalness:0.8; roughness:0.3; sphericalEnvMap: #sky; envMapIntensity: 1.0; normalMap: #normal; normalScale: 1 -1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 2.436143; displacementBias: -0.428408;"
+			src="#heineken"
+		></a-entity>
+
+<!-- 		<a-entity
 			geometry="primitive: torusKnot;"
 			position="2 0 0"
 			material="color: lightpink; metalness:0.8; roughness:0.2; sphericalEnvMap: #sky;"
 		></a-entity>
+ -->
 	</a-entity>
 </a-scene>
 
