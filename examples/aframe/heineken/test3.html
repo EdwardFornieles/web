@@ -27,6 +27,9 @@
   <script
     src="//apps.8thwall.com/xrweb?appKey=qmKKyWKggHcjmoNObb78qpWpXHEnzZQyTP73VT0qWDiN18TFJfSJh0pm0ccyZJaFRn0ASg"></script>
 
+
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r79/examples/js/loaders/BinaryLoader.js"></script>
+
   <!-- client code -->
   <script src="index.js"></script>
   <link rel="stylesheet" type="text/css" href="index.css">
@@ -49,7 +52,7 @@
     	<a-asset-item id="tree-mtl" src="a-frame-assets/taca.mtl"></a-asset-item>
  -->
 		<a-asset-item id="tree-obj" src="a-frame-assets/ninjaHead_Low.obj"></a-asset-item>
-
+<a-asset-item id="ninja-model-js" src="a-frame-assets/ninja/NinjaLo_bin.js"></a-asset-item>
 	</a-assets>
 
 	<a-entity light position="1 1 1"></a-entity>
@@ -60,7 +63,7 @@
 			position="0 0 0"
 			scale="1 1 1"
 			material="metalness:0.8; roughness:0.3; sphericalEnvMap: #sky; normalMap: #normal; normalScale: 1 -1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 2.436143; displacementBias: -0.428408;"
-			obj-model="obj: #tree-obj;"
+			bin-model="#ninja-model-js"
 		></a-entity>
 </a-entity>
 </a-scene>
