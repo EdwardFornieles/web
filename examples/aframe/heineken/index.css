@@ -50,8 +50,8 @@
   z-index: 999;
   position: absolute;
   top: 20px;
-  width: 140px;
-  left: 50%;
+  width: 100%;
+  left: 0%;
   margin: auto;
   position: absolute;
   left: 0;
@@ -76,9 +76,9 @@
 .photo{
   z-index: 999;
   height: 70px;
-  width: 70px;
+  width: 100%;
   position: absolute;
-  left: 50%;
+  left: 0%;
   margin-left: -35px;
   bottom: 0%;
   margin-bottom: 20px;
