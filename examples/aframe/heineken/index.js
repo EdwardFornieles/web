@@ -22,7 +22,7 @@ AFRAME.registerComponent('heinekenframe', {
 
 //    frameEl.setAttribute('animation', 'clip: *')
 //    frameEl.setAttribute('material', 'metalness:1.0; roughness:0.3; normalMap: #normal; normalScale: 1; ambientOcclusionMapIntensity: 1.0; ambientOcclusionMap: #ao; displacementMap: #displacement; displacementScale: 1.0; displacementBias: -0.428408;')
-    frameEl.setAttribute('cube-env-map', 'path: cubemap/; extension: jpg;')
+    frameEl.setAttribute('cube-env-map', 'path: cubemap1/; extension: jpg;')
 
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
