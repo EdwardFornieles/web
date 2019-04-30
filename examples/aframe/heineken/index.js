@@ -88,7 +88,12 @@ AFRAME.registerComponent('heinekenframe', {
         object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
         // sound1.stop();
         // sound1.play();
-        playSound();
+        if(!sound1.playing())
+        {
+          sound1.play();
+        }
+        
+        //playSound();
         oldPos = 1;
       }
 
