@@ -11,7 +11,7 @@ AFRAME.registerComponent('heinekenframe', {
     const shutterButton = document.getElementById('shutterButton')
     const closeButton = document.getElementById('closeButton')
 
-    const loadButton = document.getElementById('loadImg')
+    // const loadButton = document.getElementById('loadImg')
 
     // Setup the sounds to be used.
     sound1 = new Howl({
@@ -31,10 +31,8 @@ AFRAME.registerComponent('heinekenframe', {
       showhide(false, 'logo');
     })
 
-    loadButton.addEventListener('click', () => {
-      showhide(true, 'PreloaderImg');
-      showhide(true, 'loadImg');
-    })
+    // loadButton.addEventListener('click', () => {
+    // })
 
     shutterButton.addEventListener('click', () => {
 
@@ -159,6 +157,9 @@ function showhide(flag, _id) {
   }
 }
 
-function takePhoto() {
-  alert("clicked photo image");
+function takeAudio() {
+  showhide(true, 'PreloaderImg');
+  showhide(true, 'loadImg');
+
+  // alert("clicked photo image");
 }
