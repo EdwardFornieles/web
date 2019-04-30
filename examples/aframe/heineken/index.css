@@ -61,7 +61,7 @@
 }
 
 #shutterButton {
-  background-image: url('camera.png');
+  background-image: url('assets/camera.png');
 }
 
 .photo #shutterButton {
@@ -69,7 +69,7 @@
 }
 
 #closeButton {
-  background-image: url('close.png');
+  background-image: url('assets/close.png');
   display: none;
 }
 
