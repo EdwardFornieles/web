@@ -81,14 +81,13 @@ AFRAME.registerComponent('heinekenframe', {
       {
         object3D.quaternion.copy(detail.rotation)
         object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
+        sound1.play();
         oldPos = 1;
       }
 
       object3D.visible = true
 
       showhide(true, 'logo');
-
-      sound1.play();
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
