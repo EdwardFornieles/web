@@ -11,6 +11,8 @@ AFRAME.registerComponent('heinekenframe', {
     const shutterButton = document.getElementById('shutterButton')
     const closeButton = document.getElementById('closeButton')
 
+    const loadButton = document.getElementById('loadImg')
+
     // Setup the sounds to be used.
     sound1 = new Howl({
       src: ['assets/Uefa.mp3', 'assets/Uefa.webm'],
@@ -27,6 +29,11 @@ AFRAME.registerComponent('heinekenframe', {
     closeButton.addEventListener('click', () => {
       container.classList.remove('photo')
       showhide(false, 'logo');
+    })
+
+    loadButton.addEventListener('click', () => {
+      showhide(true, 'PreloaderImg');
+      showhide(true, 'loadImg');
     })
 
     shutterButton.addEventListener('click', () => {
@@ -86,12 +93,12 @@ AFRAME.registerComponent('heinekenframe', {
       {
         object3D.quaternion.copy(detail.rotation)
         object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
-        // if(!sound1.playing())
-        // {
-        //   sound1.play();
-        // }
+        if(!sound1.playing())
+        {
+          sound1.play();
+        }
 
-        playSound();
+        // playSound();
         oldPos = 1;
       }
 
