@@ -26,6 +26,7 @@ AFRAME.registerComponent('heinekenframe', {
 
     closeButton.addEventListener('click', () => {
       container.classList.remove('photo')
+      showhide(false, 'logo');
     })
 
     shutterButton.addEventListener('click', () => {

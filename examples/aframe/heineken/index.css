@@ -128,3 +128,7 @@
 .photo #closeButton {
   display: block;
 }
+
+.logo #closeButton {
+  display: none;
+}
