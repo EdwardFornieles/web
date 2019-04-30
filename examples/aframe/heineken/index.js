@@ -1,3 +1,4 @@
+var sound1;
 AFRAME.registerComponent('heinekenframe', {
   schema: {
     name: {type: 'string'},
@@ -12,7 +13,7 @@ AFRAME.registerComponent('heinekenframe', {
     const logoPart = document.getElementById('top_header')
 
     // Setup the sounds to be used.
-    var sound1 = new Howl({
+    sound1 = new Howl({
       src: ['assets/Uefa.mp3', 'assets/Uefa.webm'],
       html5: true
     });
