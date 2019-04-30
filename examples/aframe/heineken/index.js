@@ -43,6 +43,8 @@ AFRAME.registerComponent('heinekenframe', {
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
+      showhide(false, 'top_header');
+      showhide(false, 'bottom');
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
