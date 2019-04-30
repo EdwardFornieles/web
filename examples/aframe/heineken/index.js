@@ -25,6 +25,7 @@ AFRAME.registerComponent('heinekenframe', {
     })
 
     shutterButton.addEventListener('click', () => {
+      sound1.play();
       // Emit a screenshotrequest to the xrweb component
       this.el.sceneEl.emit('screenshotrequest')
 
