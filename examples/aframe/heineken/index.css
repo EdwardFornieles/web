@@ -129,6 +129,7 @@
 
 #closeButton {
   background-image: url('assets/close.png');
+  background-size: 70px;
   display: none;
 }
 
