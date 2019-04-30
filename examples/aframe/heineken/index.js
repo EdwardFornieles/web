@@ -47,7 +47,7 @@ AFRAME.registerComponent('heinekenframe', {
     const {object3D, sceneEl} = this.el
 
     // Hide the image target until it is found
-    object3D.visible = false
+    //object3D.visible = false
 
     const frameEl = document.createElement('a-entity')    
     frameEl.setAttribute('scale', '1 1 1')
@@ -64,6 +64,8 @@ AFRAME.registerComponent('heinekenframe', {
     this.el.appendChild(document.getElementById('top_header'));
     this.el.appendChild(document.getElementById('logo'));
 
+    frameEl.visible = false;
+
     var oldPos = 0;
 
     // showImage handles displaying and moving the virtual object to match the image
@@ -78,7 +80,9 @@ AFRAME.registerComponent('heinekenframe', {
         oldPos = 1;
       }
 
-      object3D.visible = true
+      //object3D.visible = true
+          frameEl.visible = true;
+
 
       showhide(true, 'logo');
 
@@ -88,7 +92,9 @@ AFRAME.registerComponent('heinekenframe', {
     // hideImage handles hiding the virtual object when the image target is lost
     const hideImage = () => {
 
-      object3D.visible = false
+      //object3D.visible = false
+          frameEl.visible = false;
+
 
       showhide(false, 'logo');
       showhide(false, 'top_header');
