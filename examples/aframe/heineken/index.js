@@ -29,7 +29,6 @@ AFRAME.registerComponent('heinekenframe', {
     })
 
     shutterButton.addEventListener('click', () => {
-      sound1.play();
 
       // Emit a screenshotrequest to the xrweb component
       this.el.sceneEl.emit('screenshotrequest')
@@ -86,7 +85,7 @@ AFRAME.registerComponent('heinekenframe', {
       {
         object3D.quaternion.copy(detail.rotation)
         object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
-        shutterButton.click();
+        //shutterButton.click();
         oldPos = 1;
       }
 
