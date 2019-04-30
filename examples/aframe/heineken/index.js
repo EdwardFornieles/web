@@ -101,7 +101,7 @@ AFRAME.registerComponent('heinekenframe', {
 
       object3D.visible = false
 
-      showhide(false, 'logo');
+//      showhide(false, 'logo');
       showhide(false, 'top_header');
       showhide(false, 'bottom');
 
@@ -113,7 +113,7 @@ AFRAME.registerComponent('heinekenframe', {
     this.el.addEventListener('xrimageupdated', showImage)
     this.el.addEventListener('xrimagelost', hideImage)
 
-    showhide(false, 'logo');
+//    showhide(false, 'logo');
     showhide(false, 'top_header');
     showhide(false, 'bottom');
 
