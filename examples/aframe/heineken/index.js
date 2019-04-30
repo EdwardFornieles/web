@@ -87,6 +87,7 @@ AFRAME.registerComponent('heinekenframe', {
         object3D.quaternion.copy(detail.rotation)
         object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
         //shutterButton.click();
+        sound1.stop();
         sound1.play();
         oldPos = 1;
       }
