@@ -13,7 +13,7 @@ AFRAME.registerComponent('heinekenframe', {
 
     // Setup the sounds to be used.
     var sound1 = new Howl({
-      src: ['assets/Uefa.mp3'],
+      src: ['assets/Uefa.mp3', 'assets/Uefa.webm'],
       html5: true
     });
 
@@ -25,7 +25,6 @@ AFRAME.registerComponent('heinekenframe', {
     })
 
     shutterButton.addEventListener('click', () => {
-      sound1.play();
       // Emit a screenshotrequest to the xrweb component
       this.el.sceneEl.emit('screenshotrequest')
 
