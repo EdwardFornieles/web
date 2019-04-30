@@ -45,33 +45,6 @@
   pointer-events: auto;
 }
 
-#shutterButton, #closeButton {
-  position: absolute;
-  height: 70px;
-  width: 70px;
-  left: 50%;
-  margin-left: -35px;
-  bottom: 0%;
-  margin-bottom: 20px;
-  pointer-events: auto;
-}
-
-#shutterButton {
-  background-image: url('assets/camera.png');
-}
-
-.photo #shutterButton {
-  display: none;
-}
-
-#closeButton {
-  background-image: url('assets/close.png');
-  display: none;
-}
-
-.photo #closeButton {
-  display: block;
-}
 
 .logoTop{
   z-index: 999;
@@ -131,4 +104,34 @@
   width: 75px;
   transform: translateY(-50%);
   top: 50%;
+}
+
+#shutterButton, #closeButton {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  left: 50%;
+  margin-left: -35px;
+  bottom: 0%;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  pointer-events: auto;
+}
+
+#shutterButton {
+  background-image: url('assets/camera.png');
+}
+
+.photo #shutterButton {
+  display: none;
+}
+
+#closeButton {
+  background-image: url('assets/close.png');
+  display: none;
+}
+
+.photo #closeButton {
+  display: block;
 }
