@@ -42,6 +42,7 @@
 .photo #photoModeImage {
   opacity: 1;
   transition: 0s;
+  z-index: 100;
   pointer-events: auto;
 }
 
