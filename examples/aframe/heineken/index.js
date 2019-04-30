@@ -43,7 +43,7 @@ AFRAME.registerComponent('heinekenframe', {
       object3D.visible = true
       playSound();
       showhide(true, 'logo');
-      showhide(true, 'top_header');
+//      showhide(true, 'top_header');
 //      showhide(true, 'bottom');
     }
 
@@ -51,7 +51,7 @@ AFRAME.registerComponent('heinekenframe', {
     const hideImage = () => {
       object3D.visible = false
       showhide(false, 'logo');
-      showhide(true, 'top_header');
+//      showhide(false, 'top_header');
       oldPos = 0;
     }
 
