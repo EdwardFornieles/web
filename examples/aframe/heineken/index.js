@@ -78,7 +78,7 @@ AFRAME.registerComponent('heinekenframe', {
 
       object3D.visible = true
 
-      // showhide(true, 'logo');
+      showhide(true, 'logo');
 
       playSound();
     }
@@ -88,9 +88,9 @@ AFRAME.registerComponent('heinekenframe', {
 
       object3D.visible = false
 
-      // showhide(false, 'logo');
-      // showhide(false, 'top_header');
-      // showhide(false, 'bottom');
+      showhide(false, 'logo');
+      showhide(false, 'top_header');
+      showhide(false, 'bottom');
 
       oldPos = 0;
     }
@@ -100,9 +100,9 @@ AFRAME.registerComponent('heinekenframe', {
     this.el.addEventListener('xrimageupdated', showImage)
     this.el.addEventListener('xrimagelost', hideImage)
 
-    // showhide(false, 'logo');
-    // showhide(false, 'top_header');
-    // showhide(false, 'bottom');
+    showhide(false, 'logo');
+    showhide(false, 'top_header');
+    showhide(false, 'bottom');
 
     console.log("loaded");
 
