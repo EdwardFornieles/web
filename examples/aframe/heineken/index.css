@@ -47,11 +47,12 @@
 
 #shutterButton, #closeButton {
   position: absolute;
-  width: 15vmin;
-  height: 15vmin;
-  bottom: 2vmax;
-  border-radius: 7.5vmin;
+  height: 70px;
+  width: 70px;
   left: 50%;
+  margin-left: -35px;
+  bottom: 0%;
+  margin-bottom: 20px;
   transform: translateX(-50%);
   background-size: 50%;
   background-repeat: no-repeat;
