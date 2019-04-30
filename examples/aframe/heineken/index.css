@@ -120,6 +120,7 @@
 
 #shutterButton {
   background-image: url('assets/camera.png');
+  background-size: 70px;
 }
 
 .photo #shutterButton {
