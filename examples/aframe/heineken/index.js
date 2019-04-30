@@ -17,6 +17,10 @@ AFRAME.registerComponent('heinekenframe', {
       html5: true
     });
 
+  sound1.once('load', function() {
+  });
+
+
 // Container starts hidden so it isn't visible when the page is still loading
     container.style.display = 'block'
 
