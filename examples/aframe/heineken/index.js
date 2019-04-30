@@ -9,6 +9,7 @@ AFRAME.registerComponent('heinekenframe', {
     const image = document.getElementById('photoModeImage')
     const shutterButton = document.getElementById('shutterButton')
     const closeButton = document.getElementById('closeButton')
+    const logoPart = document.getElementById('top_header')
 
 // Container starts hidden so it isn't visible when the page is still loading
     container.style.display = 'block'
@@ -47,7 +48,7 @@ AFRAME.registerComponent('heinekenframe', {
     const {object3D, sceneEl} = this.el
 
     // Hide the image target until it is found
-    //object3D.visible = false
+    object3D.visible = false
 
     const frameEl = document.createElement('a-entity')    
     frameEl.setAttribute('scale', '1 1 1')
@@ -61,10 +62,7 @@ AFRAME.registerComponent('heinekenframe', {
       frameEl.setAttribute('rotation', '0 90 90')
     }
     this.el.appendChild(frameEl)
-    this.el.appendChild(document.getElementById('top_header'));
-    this.el.appendChild(document.getElementById('logo'));
-
-    frameEl.visible = false;
+    this.el.appendChild(logoPart);
 
     var oldPos = 0;
 
@@ -80,9 +78,7 @@ AFRAME.registerComponent('heinekenframe', {
         oldPos = 1;
       }
 
-      //object3D.visible = true
-          frameEl.visible = true;
-
+      object3D.visible = true
 
       showhide(true, 'logo');
 
@@ -92,9 +88,8 @@ AFRAME.registerComponent('heinekenframe', {
     // hideImage handles hiding the virtual object when the image target is lost
     const hideImage = () => {
 
-      //object3D.visible = false
-          frameEl.visible = false;
-
+      object3D.visible = false
+      logoPart.visible = true;
 
       showhide(false, 'logo');
       showhide(false, 'top_header');
@@ -107,6 +102,8 @@ AFRAME.registerComponent('heinekenframe', {
     this.el.addEventListener('xrimagefound', showImage)
     this.el.addEventListener('xrimageupdated', showImage)
     this.el.addEventListener('xrimagelost', hideImage)
+
+      logoPart.visible = true;
 
     showhide(false, 'logo');
     showhide(false, 'top_header');
