@@ -82,9 +82,10 @@ AFRAME.registerComponent('heinekenframe', {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
       object3D.position.copy(detail.position)
+      object3D.quaternion.copy(detail.rotation)
+
       if(oldPos == 0)
       {
-        object3D.quaternion.copy(detail.rotation)
         object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
         // sound1.stop();
         // sound1.play();
