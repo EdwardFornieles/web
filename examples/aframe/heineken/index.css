@@ -5,6 +5,10 @@
   bottom: 0;
   right: 0;
   z-index: 10;
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   pointer-events: none;
 }
 
