@@ -10,7 +10,6 @@ AFRAME.registerComponent('heinekenframe', {
     const image = document.getElementById('photoModeImage')
     const shutterButton = document.getElementById('shutterButton')
     const closeButton = document.getElementById('closeButton')
-    const logoPart = document.getElementById('top_header')
 
     // Setup the sounds to be used.
     sound1 = new Howl({
@@ -74,7 +73,6 @@ AFRAME.registerComponent('heinekenframe', {
       frameEl.setAttribute('rotation', '0 90 90')
     }
     this.el.appendChild(frameEl)
-    this.el.appendChild(logoPart);
 
     var oldPos = 0;
 
@@ -92,7 +90,6 @@ AFRAME.registerComponent('heinekenframe', {
       }
 
       object3D.visible = true
-      logoPart.visible = true;
 
       showhide(true, 'logo');
     }
@@ -101,7 +98,6 @@ AFRAME.registerComponent('heinekenframe', {
     const hideImage = () => {
 
       object3D.visible = false
-      logoPart.visible = true;
 
       showhide(false, 'logo');
       showhide(false, 'top_header');
@@ -115,15 +111,11 @@ AFRAME.registerComponent('heinekenframe', {
     this.el.addEventListener('xrimageupdated', showImage)
     this.el.addEventListener('xrimagelost', hideImage)
 
-      logoPart.visible = true;
-
     showhide(false, 'logo');
     showhide(false, 'top_header');
     showhide(false, 'bottom');
 
     console.log("loaded");
-
-
   }
 })
 
