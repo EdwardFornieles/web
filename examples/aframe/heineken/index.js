@@ -11,6 +11,12 @@ AFRAME.registerComponent('heinekenframe', {
     const closeButton = document.getElementById('closeButton')
     const logoPart = document.getElementById('top_header')
 
+    // Setup the sounds to be used.
+    var sound1 = new Howl({
+      src: ['assets/Uefa.mp3'],
+      html5: true
+    });
+
 // Container starts hidden so it isn't visible when the page is still loading
     container.style.display = 'block'
 
@@ -82,7 +88,7 @@ AFRAME.registerComponent('heinekenframe', {
 
       showhide(true, 'logo');
 
-      playSound();
+      sound1.play();
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
