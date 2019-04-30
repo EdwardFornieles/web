@@ -86,11 +86,11 @@ function playSound() {
     sound.play();
 }
 function showhide(flag, _id) {
-  var logo = document.getElementById(_id);
+  var logoImg = document.getElementById(_id);
   if(flag) {
-    logo.style.display = "none";
+    logoImg.style.display = "none";
   } else {
-    logo.style.display = "block";
+    logoImg.style.display = "block";
   }
 }
 function takePhoto() {
