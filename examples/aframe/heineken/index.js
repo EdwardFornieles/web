@@ -42,6 +42,8 @@ AFRAME.registerComponent('heinekenframe', {
 
       object3D.visible = true
 
+      showhide(true, 'logo');
+
       playSound();
     }
 
@@ -53,7 +55,7 @@ AFRAME.registerComponent('heinekenframe', {
       showhide(false, 'logo');
       showhide(false, 'top_header');
       showhide(false, 'bottom');
-      
+
       oldPos = 0;
     }
 
@@ -62,10 +64,11 @@ AFRAME.registerComponent('heinekenframe', {
     this.el.addEventListener('xrimageupdated', showImage)
     this.el.addEventListener('xrimagelost', hideImage)
 
-    console.log("loaded");
     showhide(false, 'logo');
     showhide(false, 'top_header');
     showhide(false, 'bottom');
+
+    console.log("loaded");
   }
 })
 
@@ -86,6 +89,7 @@ function playSound() {
     var sound = document.getElementById("audio");
     sound.play();
 }
+
 function showhide(flag, _id) {
   var logoImg = document.getElementById(_id);
   if(flag) {
@@ -94,6 +98,7 @@ function showhide(flag, _id) {
     logoImg.style.display = "block";
   }
 }
+
 function takePhoto() {
   alert("clicked photo image");
 }
