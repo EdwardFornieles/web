@@ -13,7 +13,7 @@ AFRAME.registerComponent('heinekenframe', {
 // Container starts hidden so it isn't visible when the page is still loading
     container.style.display = 'block'
 
-            closeButton.addEventListener('click', () => {
+    closeButton.addEventListener('click', () => {
       container.classList.remove('photo')
     })
 
@@ -61,6 +61,8 @@ AFRAME.registerComponent('heinekenframe', {
       frameEl.setAttribute('rotation', '0 90 90')
     }
     this.el.appendChild(frameEl)
+    this.el.appendChild(document.getElementById('top_header'));
+    this.el.appendChild(document.getElementById('logo'));
 
     var oldPos = 0;
 
