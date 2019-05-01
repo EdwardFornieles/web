@@ -68,7 +68,7 @@ AFRAME.registerComponent('heinekenframe', {
     object3D.visible = false
 
     const frameEl = document.createElement('a-entity')    
-    frameEl.setAttribute('scale', '1.3 1.3 1.3')
+    frameEl.setAttribute('scale', '1.2 1.2 1.2')
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('rotation', '90 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
@@ -126,9 +126,10 @@ AFRAME.registerComponent('heinekenframe', {
     showhide(false, 'top_header');
     showhide(false, 'bottom');
 
-    showhide(true, 'SpeakerOn');
-    showhide(false, 'SpeakerOff');
-
+    showhide(false, 'SpeakerOn');
+    showhide(true, 'SpeakerOff');
+    sound1.mute(true);
+    
     console.log("loaded");
   }
 })
