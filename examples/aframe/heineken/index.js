@@ -127,7 +127,7 @@ AFRAME.registerComponent('heinekenframe', {
     showhide(false, 'logo');
     showhide(false, 'top_header');
     showhide(false, 'bottom');
-    showhide(false, 'PopupImg');
+    showhide(true, 'PopupImg');
 
     showhide(false, 'SpeakerOn');
     showhide(true, 'SpeakerOff');
