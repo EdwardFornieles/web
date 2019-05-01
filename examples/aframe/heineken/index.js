@@ -29,6 +29,7 @@ AFRAME.registerComponent('heinekenframe', {
     closeButton.addEventListener('click', () => {
       container.classList.remove('photo')
       showhide(false, 'logo');
+      showhide(true, 'PopupImg');
     })
 
     // loadButton.addEventListener('click', () => {
@@ -58,6 +59,7 @@ AFRAME.registerComponent('heinekenframe', {
 
       // Show the photo
       container.classList.add('photo')
+      showhide(false, 'PopupImg');
     })
 
 
