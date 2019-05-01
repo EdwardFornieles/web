@@ -96,7 +96,15 @@
   top: 50%;
   pointer-events: auto;
 }
-#Speaker {
+#SpeakerOn {
+  position: absolute;
+  right: 20px;
+  width: 40px;
+  transform: translateY(-50%);
+  top: 50%;
+  pointer-events: auto;
+}
+#SpeakerOff {
   position: absolute;
   right: 20px;
   width: 40px;
