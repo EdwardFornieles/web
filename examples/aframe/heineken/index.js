@@ -129,7 +129,7 @@ AFRAME.registerComponent('heinekenframe', {
     showhide(false, 'SpeakerOn');
     showhide(true, 'SpeakerOff');
     sound1.mute(true);
-    
+
     console.log("loaded");
   }
 })
@@ -162,15 +162,15 @@ function showhide(flag, _id) {
 }
 
 function takeOnAudio() {
-  showhide(true, 'SpeakerOff');
-  showhide(false, 'SpeakerOn');
+  showhide(false, 'SpeakerOff');
+  showhide(true, 'SpeakerOn');
   sound1.mute(false);
   // alert("clicked photo image");
 }
 
 function takeOffAudio() {
-  showhide(true, 'SpeakerOn');
-  showhide(false, 'SpeakerOff');
+  showhide(false, 'SpeakerOn');
+  showhide(true, 'SpeakerOff');
   sound1.mute(true);
   // alert("clicked photo image");
 }
