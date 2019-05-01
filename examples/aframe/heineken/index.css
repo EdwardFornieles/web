@@ -99,7 +99,7 @@
 #Speaker {
   position: absolute;
   right: 20px;
-  width: 75px;
+  width: 40px;
   transform: translateY(-50%);
   top: 50%;
   pointer-events: auto;
