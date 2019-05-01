@@ -160,6 +160,6 @@ function showhide(flag, _id) {
 function takeAudio() {
   showhide(true, 'PreloaderImg');
   showhide(true, 'loadImg');
-
+  showhide(true, 'ChampionImg');
   // alert("clicked photo image");
 }
