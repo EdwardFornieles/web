@@ -27,10 +27,10 @@
 
 #PopupImg {
   position: absolute;
-  width: 108px;
+  width: 200px;
   left: 50%;
-  margin-left: -54px;
-  top: 75px;
+  margin-left: -100px;
+  top: 50px;
   z-index: 100;
 }
 
