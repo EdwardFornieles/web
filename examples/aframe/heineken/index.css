@@ -25,9 +25,9 @@
   pointer-events: auto;
 }
 
-#PopupImage {
+#PopupImg {
   position: absolute;
-  max-height: 15%;
+  max-width: 65%;
   top: 35%;
   left: 50%;
   z-index: 100;
@@ -141,7 +141,8 @@
 .photo #shutterButton {
   display: none;
 }
-.PopupImage #shutterButton {
+
+.PopupImg #shutterButton {
   display: none;
 }
 
@@ -154,6 +155,7 @@
 .photo #closeButton {
   display: block;
 }
-.PopupImage #closeButton {
+
+.PopupImg #closeButton {
   display: block;
 }
