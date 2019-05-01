@@ -61,35 +61,6 @@
   opacity: 0.5;
   filter: alpha(opacity=50)
 }
-#PreloaderImg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: 200;
-}
-#ChampionImg {
-  position: absolute;
-  width: 108px;
-  left: 50%;
-  margin-left: -54px;
-  top: 75px;
-  z-index: 200;
-}
-#loadImg {
-  position: absolute;
-  width: 218px;  
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 200;
-  pointer-events: auto;
-}
-
 #top_header {
   position: absolute;
   height: 65px;
@@ -120,6 +91,14 @@
 #voltar {
   position: absolute;
   left: 20px;
+  width: 75px;
+  transform: translateY(-50%);
+  top: 50%;
+  pointer-events: auto;
+}
+#Speaker {
+  position: absolute;
+  right: 20px;
   width: 75px;
   transform: translateY(-50%);
   top: 50%;

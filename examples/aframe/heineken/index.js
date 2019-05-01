@@ -158,8 +158,6 @@ function showhide(flag, _id) {
 }
 
 function takeAudio() {
-  showhide(true, 'PreloaderImg');
-  showhide(true, 'loadImg');
-  showhide(true, 'ChampionImg');
+  showhide(true, 'Speaker');
   // alert("clicked photo image");
 }
