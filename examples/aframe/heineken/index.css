@@ -143,10 +143,6 @@
   display: none;
 }
 
-.PopupImg #shutterButton {
-  display: none;
-}
-
 #closeButton {
   background-image: url('assets/close.png');
   background-size: 70px;
