@@ -88,9 +88,9 @@ AFRAME.registerComponent('heinekenframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
+      object3D.position.copy(detail.position)
       if(oldPos == 0)
       {
-        object3D.position.copy(detail.position)
         object3D.quaternion.copy(detail.rotation)
         object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
         if(!sound1.playing())
@@ -100,29 +100,29 @@ AFRAME.registerComponent('heinekenframe', {
 
         // playSound();
         oldPos = 1;
-        object3D.visible = true
-
-        showhide(true, 'logo');
       }
 
+      object3D.visible = true
+
+      showhide(true, 'logo');
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
     const hideImage = () => {
 
-//      object3D.visible = false
+      object3D.visible = false
 
-      // showhide(false, 'logo');
-      // showhide(false, 'top_header');
-      // showhide(false, 'bottom');
+      showhide(false, 'logo');
+      showhide(false, 'top_header');
+      showhide(false, 'bottom');
 
-      // oldPos = 0;
+      oldPos = 0;
     }
 
     // These events are routed and dispatched by xrextras-generate-image-targets
     this.el.addEventListener('xrimagefound', showImage)
     this.el.addEventListener('xrimageupdated', showImage)
-    this.el.addEventListener('xrimagelost', hideImage)
+    //this.el.addEventListener('xrimagelost', hideImage)
 
     showhide(false, 'logo');
     showhide(false, 'top_header');
