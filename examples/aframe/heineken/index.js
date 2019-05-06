@@ -106,8 +106,10 @@ AFRAME.registerComponent('heinekenframe', {
         object3D.position.copy(detail.position)
         //object3D.position.y = 0;
         object3D.quaternion.copy(detail.rotation)
-        object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
+        //object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
 
+        console.log(object3D.position);
+        
         oldPos = oldPos + 1;
       }
 
