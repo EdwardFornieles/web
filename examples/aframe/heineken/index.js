@@ -88,7 +88,7 @@ AFRAME.registerComponent('heinekenframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
-      if(oldPos < 1000)
+      if(oldPos < 1)
       {
         if(oldPos == 0)
         {
@@ -104,6 +104,7 @@ AFRAME.registerComponent('heinekenframe', {
         }
 
         object3D.position.copy(detail.position)
+        object3D.position.y = 0;
         object3D.quaternion.copy(detail.rotation)
         //object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
 
