@@ -90,19 +90,24 @@ AFRAME.registerComponent('heinekenframe', {
 
       if(oldPos < 1000)
       {
+        if(oldPos == 0)
+        {
+          if(!sound1.playing())
+          {
+            sound1.play();
+          }
+
+          // playSound();
+          object3D.visible = true
+
+          showhide(true, 'logo');
+        }
+
         object3D.position.copy(detail.position)
         object3D.quaternion.copy(detail.rotation)
         //object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
-        if(!sound1.playing())
-        {
-          sound1.play();
-        }
 
-        // playSound();
         oldPos = oldPos + 1;
-        object3D.visible = true
-
-        showhide(true, 'logo');
       }
 
     }
