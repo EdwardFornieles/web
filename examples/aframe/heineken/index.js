@@ -88,7 +88,7 @@ AFRAME.registerComponent('heinekenframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
-      if(oldPos == 0)
+      if(oldPos < 100)
       {
         object3D.position.copy(detail.position)
         object3D.quaternion.copy(detail.rotation)
@@ -99,7 +99,7 @@ AFRAME.registerComponent('heinekenframe', {
         }
 
         // playSound();
-        oldPos = 1;
+        oldPos = oldPos + 1;
         object3D.visible = true
 
         showhide(true, 'logo');
