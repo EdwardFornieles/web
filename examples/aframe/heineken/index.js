@@ -70,7 +70,7 @@ AFRAME.registerComponent('heinekenframe', {
     object3D.visible = false
 
     const frameEl = document.createElement('a-entity')    
-    frameEl.setAttribute('scale', '5 5 5')
+    frameEl.setAttribute('scale', '8 8 8')
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('rotation', '90 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
@@ -88,7 +88,7 @@ AFRAME.registerComponent('heinekenframe', {
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
-      if(oldPos < 100)
+      if(oldPos < 1000)
       {
         object3D.position.copy(detail.position)
         object3D.quaternion.copy(detail.rotation)
