@@ -102,7 +102,7 @@ AFRAME.registerComponent('heinekenframe', {
 
           showhide(true, 'logo');
 
-          setTimeout(Rescan, 40000);
+          setTimeout(Rescan, 4000);
         }
 
         object3D.position.copy(detail.position)
