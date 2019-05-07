@@ -101,6 +101,8 @@ AFRAME.registerComponent('heinekenframe', {
           object3D.visible = true
 
           showhide(true, 'logo');
+
+          setTimeout(Rescan, 40000);
         }
 
         object3D.position.copy(detail.position)
@@ -124,6 +126,16 @@ AFRAME.registerComponent('heinekenframe', {
       // showhide(false, 'bottom');
 
       // oldPos = 0;
+    }
+
+    const Rescan = () => {
+      alert("timeout");
+      object3D.visible = false
+      showhide(false, 'logo');
+      showhide(false, 'top_header');
+      showhide(false, 'bottom');
+
+      oldPos = 0;
     }
 
     // These events are routed and dispatched by xrextras-generate-image-targets
