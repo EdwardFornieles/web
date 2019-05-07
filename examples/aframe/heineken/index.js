@@ -102,7 +102,7 @@ AFRAME.registerComponent('heinekenframe', {
 
           showhide(true, 'logo');
 
-          setTimeout(Rescan, 4000);
+          setTimeout(Rescan, 40000);
         }
 
         object3D.position.copy(detail.position)
@@ -129,7 +129,7 @@ AFRAME.registerComponent('heinekenframe', {
     }
 
     const Rescan = () => {
-      alert("timeout");
+      //alert("timeout");
       object3D.visible = false
       showhide(false, 'logo');
       showhide(false, 'top_header');
