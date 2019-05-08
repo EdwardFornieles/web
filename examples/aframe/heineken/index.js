@@ -156,6 +156,12 @@ AFRAME.registerComponent('heinekenframe', {
     showhide(false, 'bottom');
     showhide(true, 'PopupImg');
 
+    showhide(false, 'PreloaderImg');
+    showhide(false, 'ChampionImg');
+    showhide(false, 'loadImg');
+    showhide(false, 'eighth');
+    showhide(false, 'loadtext');
+
     showhide(false, 'SpeakerOn');
     showhide(true, 'SpeakerOff');
     sound1.mute(true);
@@ -207,8 +213,10 @@ function takeOffAudio() {
 
 function startTracking() {
   showhide(true, 'PreloaderImg');
-  showhide(true, 'loadImg');
   showhide(true, 'ChampionImg');
+  showhide(true, 'loadImg');
+  showhide(true, 'eighth');
+  showhide(true, 'loadtext');
 
   isTracking = 1;
 

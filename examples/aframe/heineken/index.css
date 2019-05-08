@@ -101,6 +101,23 @@
   pointer-events: auto;
 }
 
+#eighth {
+  position: absolute;
+  width: 160px;
+  left: 50%;
+  margin-left: -80px;
+  bottom: 30px;
+  z-index: 200;
+}
+
+#loadtext {
+  position: absolute;
+  width: 80px;
+  left: 50%;
+  margin-left: -40px;
+  bottom: 60%;
+  z-index: 200;
+}
 
 #top_header {
   position: absolute;
