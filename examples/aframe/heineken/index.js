@@ -84,7 +84,7 @@ AFRAME.registerComponent('heinekenframe', {
     }
     this.el.appendChild(frameEl)
 
-    setTimeout(startTracking, 5000);
+    setTimeout(startTracking, 50000);
 
     isTracking = 0;
 
