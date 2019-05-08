@@ -1,6 +1,4 @@
 var sound1;
-var isTracking = 0;
-
 AFRAME.registerComponent('heinekenframe', {
   schema: {
     name: {type: 'string'},
@@ -30,8 +28,7 @@ AFRAME.registerComponent('heinekenframe', {
 
     closeButton.addEventListener('click', () => {
       container.classList.remove('photo')
-//      showhide(false, 'logo');
-      showhide(true, 'PopupImg');
+      showhide(false, 'logo');
     })
 
     // loadButton.addEventListener('click', () => {
@@ -61,7 +58,6 @@ AFRAME.registerComponent('heinekenframe', {
 
       // Show the photo
       container.classList.add('photo')
-      showhide(false, 'PopupImg');
     })
 
 
@@ -72,7 +68,7 @@ AFRAME.registerComponent('heinekenframe', {
     object3D.visible = false
 
     const frameEl = document.createElement('a-entity')    
-    frameEl.setAttribute('scale', '10 10 10')
+    frameEl.setAttribute('scale', '1.3 1.3 1.3')
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('rotation', '90 0 0')
     frameEl.setAttribute('gltf-model', '#heineken')
@@ -84,59 +80,36 @@ AFRAME.registerComponent('heinekenframe', {
     }
     this.el.appendChild(frameEl)
 
-    isTracking = 0;
-
     var oldPos = 0;
 
     // showImage handles displaying and moving the virtual object to match the image
     const showImage = ({detail}) => {
       // Updating position/rotation/scale using object3D is more performant than setAttribute
 
-      if(isTracking == 1)
+      object3D.position.copy(detail.position)
+      if(oldPos == 0)
       {
-        if(oldPos < 1)
+        object3D.quaternion.copy(detail.rotation)
+        object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
+        if(!sound1.playing())
         {
-          if(oldPos == 0)
-          {
-            if(!sound1.playing())
-            {
-              sound1.play();
-            }
-
-            // playSound();
-            object3D.visible = true
-
-            showhide(true, 'logo');
-
-            setTimeout(Rescan, 40000);
-          }
-
-          object3D.position.copy(detail.position)
-          object3D.quaternion.copy(detail.rotation)
-          //object3D.scale.set(detail.scale * 1.5, detail.scale * 1.5, detail.scale * 1.5)
-
-          console.log(object3D.position);
-
-          oldPos = oldPos + 1;
+          sound1.play();
         }
+
+        // playSound();
+        oldPos = 1;
       }
+
+      object3D.visible = true
+
+      showhide(true, 'logo');
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
     const hideImage = () => {
 
-//      object3D.visible = false
-
-      // showhide(false, 'logo');
-      // showhide(false, 'top_header');
-      // showhide(false, 'bottom');
-
-      // oldPos = 0;
-    }
-
-    const Rescan = () => {
-      //alert("timeout");
       object3D.visible = false
+
       showhide(false, 'logo');
       showhide(false, 'top_header');
       showhide(false, 'bottom');
@@ -152,11 +125,6 @@ AFRAME.registerComponent('heinekenframe', {
     showhide(false, 'logo');
     showhide(false, 'top_header');
     showhide(false, 'bottom');
-    showhide(true, 'PopupImg');
-
-    showhide(false, 'SpeakerOn');
-    showhide(true, 'SpeakerOff');
-    sound1.mute(true);
 
     console.log("loaded");
   }
@@ -189,26 +157,9 @@ function showhide(flag, _id) {
   }
 }
 
-function takeOnAudio() {
-  showhide(false, 'SpeakerOff');
-  showhide(true, 'SpeakerOn');
-  sound1.mute(false);
-  // alert("clicked photo image");
-}
-
-function takeOffAudio() {
-  showhide(false, 'SpeakerOn');
-  showhide(true, 'SpeakerOff');
-  sound1.mute(true);
-  // alert("clicked photo image");
-}
-
-function startTracking() {
+function takeAudio() {
   showhide(true, 'PreloaderImg');
   showhide(true, 'loadImg');
   showhide(true, 'ChampionImg');
-
-  isTracking = 1;
-
   // alert("clicked photo image");
 }
