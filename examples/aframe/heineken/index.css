@@ -81,15 +81,16 @@
 }
 #ChampionImg {
   position: absolute;
-  width: 108px;
+  width: 80px;
   left: 50%;
-  margin-left: -54px;
-  top: 75px;
+  margin-left: -40px;
+  top: 50px;
   z-index: 200;
 }
+
 #loadImg {
   position: absolute;
-  width: 218px;  
+  width: 160px;  
   margin: auto;
   position: absolute;
   left: 0;
