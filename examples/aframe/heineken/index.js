@@ -77,7 +77,7 @@ AFRAME.registerComponent('heinekenframe', {
     frameEl.setAttribute('rotation', '90 0 0')
     frameEl.setAttribute('animation-mixer', 'clip: *')
     frameEl.setAttribute('gltf-model', '#heineken')
-//    frameEl.setAttribute('cube-env-map', 'path: cubemap/; extension: jpg;')
+    frameEl.setAttribute('cube-env-map', 'path: cubemap/; extension: jpg;')
 
     if (this.data.rotated) {
       // Rotate the frame for a landscape target
