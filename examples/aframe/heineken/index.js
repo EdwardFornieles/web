@@ -75,7 +75,7 @@ AFRAME.registerComponent('heinekenframe', {
     frameEl.setAttribute('scale', '1 1 1')
     frameEl.setAttribute('position', '0 0 0')
     frameEl.setAttribute('rotation', '90 0 0')
-    frameEl.setAttribute('animation', 'clip: *')
+    frameEl.setAttribute('animation-mixer', 'clip: *')
     frameEl.setAttribute('gltf-model', '#heineken')
 //    frameEl.setAttribute('cube-env-map', 'path: cubemap/; extension: jpg;')
 
