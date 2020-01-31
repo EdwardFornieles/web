@@ -1,8 +1,8 @@
 #boticario {
-  position: absolute;
-  left: 20px;
-  width: 75px;
-  transform: translateY(-50%);
-  top: 50%;
+display: table-cell;
+    height: 246px;
+    text-align: center;
+    width: 300px;
+    vertical-align: middle;
   pointer-events: auto;
 }
