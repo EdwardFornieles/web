@@ -27,22 +27,20 @@
     <body>
         
         <a-scene
-            xrweb="disableWorldTracking: true"
-            xrextras-gesture-detector
-            xrextras-almost-there
-            antialias="true"
-            xrextras-loading
-            xrextras-runtime-error>
+        renderer="antialias: true"
+        xrweb="disableWorldTracking: false"
+        xrextras-generate-image-targets="primitive: boticario-frame"
+        xrextras-almost-there
+        xrextras-runtime-error>
         
-            <a-camera
-                raycaster="objects: .cantap"
-                cursor="fuse: false; rayOrigin: mouse;"
-                wasd-controls-enabled="true"
-            >
-            </a-camera>
+    <a-camera id="camera" position="0 4 10"
+      raycaster="objects: .cantap"
+      cursor="fuse:false; rayOrigin:mouse;">
+    </a-camera>
+
         </a-scene>
 
-        <div id="bottom" style="display: none;">
+        <div id="bottom" style="display: block;">
       <a href="http://www.boticario.com.br/">
         <img src="assets/logo-boticario.png" id="boticario1" alt="boticario1">
       </a>
