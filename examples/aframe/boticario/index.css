@@ -1,0 +1,8 @@
+#voltar {
+  position: absolute;
+  left: 20px;
+  width: 75px;
+  transform: translateY(-50%);
+  top: 50%;
+  pointer-events: auto;
+}
