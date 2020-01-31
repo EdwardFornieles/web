@@ -6,55 +6,56 @@
     
     <title>Boticário</title>
     
-<!--   <script src="require.js"></script> -->
-
-  <!-- We've included a slightly modified version of A-Frame, which fixes some polish concerns -->
-  <script src="//cdn.8thwall.com/web/aframe/8frame-0.9.0.min.js"></script>
-
-  <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
-         See github.com/8thwall/web/xrextras -->
-  <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
-
-       
+    <script src="//cdn.8thwall.com/web/aframe/8frame-0.9.0.min.js"></script>
+    
+    <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
+        See github.com/8thwall/web/xrextras -->
+        <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+        
         <!-- 8thWall Web - Replace the app key here with your own app key -->
         <script src="//apps.8thwall.com/xrweb?appKey=71N7VIXpSwzJDubr71s9XTgDI1rZhsKsP0B6MkZliJEjG0cGQQhInsJvsklCEJkoKV8dGf"></script>
-
-        <script src="index.js"></script>
-          <link rel="stylesheet" type="text/css" href="index.css">
+        
     </head>
     
     <body>
         
         <a-scene
-        renderer="antialias: true"
-        xrweb="disableWorldTracking: false"
-        xrextras-generate-image-targets="primitive: boticario-frame"
-        xrextras-almost-there
-        xrextras-runtime-error>
+            xrweb="disableWorldTracking: true"
+            xrextras-gesture-detector
+            xrextras-almost-there
+            antialias="true"
+            xrextras-loading
+            xrextras-runtime-error>
         
-                <a-assets>
+            <a-assets>
                 <a href="https://www.boticario.com.br/"><img id="logo-mira" src="assets/logo-boticario.png"></a>
                 <img id="video-thumb" src="targets/thumb-video.jpg">
-                <video
-                    id="boticario-video"
-                    autoplay        
-                    crossorigin="anonymous"
-                    loop="true"
-                    src="boticario-video.mp4">
-                </video>
             </a-assets>
+        
+            <a-camera
+                raycaster="objects: .cantap"
+                cursor="fuse: false; rayOrigin: mouse;"
+                wasd-controls-enabled="true"
+            >
+            </a-camera>
             
-    <a-camera id="camera" position="0 4 10"
-      raycaster="objects: .cantap"
-      cursor="fuse:false; rayOrigin:mouse;">
-    </a-camera>
+            <a-entity id="parent">
 
+
+                        <a-entity id="video-maroto"
+                                xrextras-named-image-target="name: video-target"
+                                geometry="primitive: plane; height: 0.8; width: 1.4;"
+                                material="opacity:0"
+                                >
+                                <a-image 
+                                    src="#logo-mira" 
+                                    position="0 -0.7 0"
+                                    width="1"
+                                    height="0.8"
+                                ></a-image>
+                        </a-entity>
+            </a-entity>
         </a-scene>
 
-        <div id="bottom" style="display: none;">
-      <a href="http://www.boticario.com.br/">
-        <img src="assets/logo-boticario.png" id="boticario" alt="boticario">
-      </a>
-    </div>
     </body>
 </html>
