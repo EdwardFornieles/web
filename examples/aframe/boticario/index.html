@@ -40,5 +40,20 @@
             </a-entity>
         </a-scene>
 
+<script type="text/javascript">
+AFRAME.registerComponent('gallery', {
+  schema: {},
+  init: function () {
+    var images = document.querySelector('#logo1');
+ 
+      images.addEventListener('click', function(e) {
+        window.open("https://www.boticario.com.br/");
+      })
+  }
+});
+</script>
+
+
     </body>
 </html>
+
