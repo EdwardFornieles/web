@@ -14,6 +14,7 @@
         
         <!-- 8thWall Web - Replace the app key here with your own app key -->
         <script src="//apps.8thwall.com/xrweb?appKey=71N7VIXpSwzJDubr71s9XTgDI1rZhsKsP0B6MkZliJEjG0cGQQhInsJvsklCEJkoKV8dGf"></script>
+
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     
@@ -28,7 +29,7 @@
             xrextras-runtime-error>
         
             <a-assets>
-                <a href="https://www.boticario.com.br/"><img id="logo-mira" src="assets/logo-boticario.png"></a>
+                <img id="logo-mira" src="assets/logo-boticario.png">
             </a-assets>
         
             <a-camera
@@ -38,22 +39,14 @@
             >
             </a-camera>
             
-            <a-entity id="parent">
 
-
-                        <a-entity id="video-maroto"
-                                xrextras-named-image-target="name: video-target"
-                                geometry="primitive: plane; height: 0.8; width: 1;"
-                                material="opacity:0"
-                                >
                                 <a-image 
                                     src="#logo-mira" 
                                     position="0 0 0"
                                     width="1"
                                     height="0.8"
                                 ></a-image>
-                        </a-entity>
-            </a-entity>
+
         </a-scene>
 
     </body>
