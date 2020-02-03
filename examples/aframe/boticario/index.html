@@ -16,10 +16,10 @@
 AFRAME.registerComponent('Boticario', {
   schema: {},
   init: function () {
-    // var image1 = document.querySelector('#iFood1');
-    //   image1.addEventListener('click', function(e) {
-    //     window.open("https://www.ifood.com.br/lista-restaurantes/1/");
-    // })
+    var image1 = document.querySelector('#iFood1');
+      image1.addEventListener('click', function(e) {
+        window.open("https://www.ifood.com.br/lista-restaurantes/1/");
+    })
     // var image2 = document.querySelector('#iFood2');
     //   image2.addEventListener('click', function(e) {
     //     window.open("https://www.boticario.com.br/");
@@ -67,8 +67,7 @@ AFRAME.registerComponent('Boticario', {
             </a-camera>
             
             <a-entity xrextras-named-image-target="name: video-target">
-              <!-- <a-image class="cantap" src="#iFood1" position="-1 1 0" width="0.3" height="0.26"></a-image> -->
-              <a-image id="iFood1" class="cantap" position="0 0 0" rotation="0 0 0" scale="1 1 1"
+              <a-image id="iFood1" class="cantap" position="-0.2 0.2 0" rotation="0 0 0" scale="1 1 1"
       width="0.3" height="0.26" opacity="1" src="#iFood1"
       roughness="1" visible="true"></a-image>
               <!-- <a-image id="iFood2" class="cantap" position="1 1 0" rotation="0 0 0" scale="1 1 1"
