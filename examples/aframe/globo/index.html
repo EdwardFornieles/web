@@ -29,7 +29,7 @@
 
     <a-assets>
       <!-- Credit to Poly by Google for the model: https://poly.google.com/view/dA5osnS0Rzj -->
-      <a-asset-item id="jelly-glb" src="globo.glb"></a-asset-item>
+      <a-asset-item id="jelly-glb" src="assets/globo.glb"></a-asset-item>
     </a-assets>
 
     <a-camera
@@ -45,7 +45,7 @@
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
     <a-entity xrextras-named-image-target="name: model-target">
       <!-- Add a child entity that can be rotated independently of the image target. -->
-      <a-entity xrextras-one-finger-rotate gltf-model="#jelly-glb" scale="1 1 1">
+      <a-entity xrextras-one-finger-rotate gltf-model="#jelly-glb" scale="0.1 0.1 0.1">
         
       </a-entity>
     </a-entity>
