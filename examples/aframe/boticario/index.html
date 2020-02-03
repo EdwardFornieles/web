@@ -16,8 +16,14 @@
 AFRAME.registerComponent('Boticario', {
   schema: {},
   init: function () {
-    var images1 = document.querySelectorAll('a-image');
-    images1.forEach(function(image) {
+    var images = document.querySelector('#iFood1');
+ var images1 = document.querySelectorAll('a-image');
+ 
+      images.addEventListener('click', function(e) {
+        window.open("https://www.boticario.com.br/");
+      })
+
+      images1.forEach(function(image) {
       image.addEventListener('click', function(e) {
         window.open("https://www.ifood.com.br/lista-restaurantes/1/");
       })
