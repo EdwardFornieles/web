@@ -16,10 +16,16 @@
 AFRAME.registerComponent('Boticario', {
   schema: {},
   init: function () {
-    var image1 = document.querySelector('#iFood1');
-      image1.addEventListener('click', function(e) {
+    var images1 = document.querySelectorAll('a-image');
+    images1.forEach(function(image) {
+      image.addEventListener('click', function(e) {
         window.open("https://www.ifood.com.br/lista-restaurantes/1/");
+      })
     })
+    // var image1 = document.querySelector('#iFood1');
+    //   image1.addEventListener('click', function(e) {
+    //     window.open("https://www.ifood.com.br/lista-restaurantes/1/");
+    // })
     // var image2 = document.querySelector('#iFood2');
     //   image2.addEventListener('click', function(e) {
     //     window.open("https://www.boticario.com.br/");
