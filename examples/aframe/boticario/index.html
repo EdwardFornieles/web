@@ -17,12 +17,11 @@ AFRAME.registerComponent('Boticario', {
   schema: {},
   init: function () {
     var images = document.querySelector('#iFood1');
- var images1 = document.querySelectorAll('a-image');
- 
       images.addEventListener('click', function(e) {
         window.open("https://www.boticario.com.br/");
       })
 
+      var images1 = document.querySelectorAll('a-image');
       images1.forEach(function(image) {
       image.addEventListener('click', function(e) {
         window.open("https://www.ifood.com.br/lista-restaurantes/1/");
@@ -79,7 +78,7 @@ AFRAME.registerComponent('Boticario', {
             </a-camera>
             
             <a-entity xrextras-named-image-target="name: video-target">
-              <a-image src="#iFood1" position="0 0 0" width="0.3" height="0.26"></a-image>
+              <a-image class="cantap" src="#iFood1" position="0 0 0" width="0.3" height="0.26"></a-image>
               <!-- <a-image class="cantap" position="-0.2 0.2 0" rotation="0 0 0" scale="1 1 1"
       width="0.3" height="0.26" opacity="1" src="#iFood1"
       roughness="1" visible="true"></a-image> -->
