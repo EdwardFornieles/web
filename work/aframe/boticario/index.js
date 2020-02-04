@@ -68,7 +68,7 @@ AFRAME.registerComponent('gallery', {
 // xrextras-generate-image-targets uses this primitive to automatically populate multiple image targets
 AFRAME.registerPrimitive('gallery-frame', {
   defaultComponents: {
-    heinekenframe: {},
+    gallery: {},
   },
 
   mappings: {
