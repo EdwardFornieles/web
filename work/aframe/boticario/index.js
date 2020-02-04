@@ -30,6 +30,8 @@ AFRAME.registerComponent('gallery', {
 
     const {object3D, sceneEl} = this.el
 
+    object3D.visible = false
+    
     var oldPos = 0;
 
     // showImage handles displaying and moving the virtual object to match the image
@@ -38,16 +40,17 @@ AFRAME.registerComponent('gallery', {
         {
           if(oldPos == 0)
           {
-            showhide(true, 'index1');
-            showhide(true, 'index2');
-            showhide(true, 'index3');
-            showhide(true, 'index4');
-            showhide(true, 'index5');
-
+            // showhide(true, 'index1');
+            // showhide(true, 'index2');
+            // showhide(true, 'index3');
+            // showhide(true, 'index4');
+            // showhide(true, 'index5');
+            object3D.visible = true
             setTimeout(Rescan, 40000);
 
             console.log("show");
           }
+          
           object3D.position.copy(detail.position)
           object3D.quaternion.copy(detail.rotation)
           oldPos = oldPos + 1;
@@ -60,12 +63,12 @@ AFRAME.registerComponent('gallery', {
     }
 
     const Rescan = () => {
-      showhide(false, 'index1');
-      showhide(false, 'index2');
-      showhide(false, 'index3');
-      showhide(false, 'index4');
-      showhide(false, 'index5');
-
+      // showhide(false, 'index1');
+      // showhide(false, 'index2');
+      // showhide(false, 'index3');
+      // showhide(false, 'index4');
+      // showhide(false, 'index5');
+      object3D.visible = false
       oldPos = 0;
       console.log("rescan");
     }
@@ -75,11 +78,11 @@ AFRAME.registerComponent('gallery', {
     this.el.addEventListener('xrimageupdated', showImage)
     this.el.addEventListener('xrimagelost', hideImage)
 
-    showhide(false, 'index1');
-    showhide(false, 'index2');
-    showhide(false, 'index3');
-    showhide(false, 'index4');
-    showhide(false, 'index5');
+    // showhide(false, 'index1');
+    // showhide(false, 'index2');
+    // showhide(false, 'index3');
+    // showhide(false, 'index4');
+    // showhide(false, 'index5');
 
     console.log("loaded");
   }
