@@ -28,6 +28,8 @@ AFRAME.registerComponent('gallery', {
       })                 
 
 
+    const {object3D, sceneEl} = this.el
+
     var oldPos = 0;
 
     // showImage handles displaying and moving the virtual object to match the image
@@ -46,6 +48,8 @@ AFRAME.registerComponent('gallery', {
 
             console.log("show");
           }
+          object3D.position.copy(detail.position)
+          object3D.quaternion.copy(detail.rotation)
           oldPos = oldPos + 1;
         }
     }
