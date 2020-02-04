@@ -27,17 +27,27 @@ AFRAME.registerComponent('gallery', {
         window.open("https://www.ifood.com.br/lista-restaurantes/5/");
       })                 
 
+
+    var oldPos = 0;
+
     // showImage handles displaying and moving the virtual object to match the image
     const showImage = ({detail}) => {
-      showhide(true, 'index1');
-      showhide(true, 'index2');
-      showhide(true, 'index3');
-      showhide(true, 'index4');
-      showhide(true, 'index5');
+        if(oldPos < 1)
+        {
+          if(oldPos == 0)
+          {
+            showhide(true, 'index1');
+            showhide(true, 'index2');
+            showhide(true, 'index3');
+            showhide(true, 'index4');
+            showhide(true, 'index5');
 
-      setTimeout(Rescan, 40000);
+            setTimeout(Rescan, 40000);
 
-      console.log("show");
+            console.log("show");
+          }
+          oldPos = oldPos + 1;
+        }
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
@@ -52,6 +62,7 @@ AFRAME.registerComponent('gallery', {
       showhide(false, 'index4');
       showhide(false, 'index5');
 
+      oldPos = 0;
       console.log("rescan");
     }
 
