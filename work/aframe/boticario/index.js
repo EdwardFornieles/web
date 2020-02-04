@@ -81,8 +81,8 @@ AFRAME.registerPrimitive('gallery-frame', {
 function showhide(flag, _id) {
   var logoImg = document.getElementById(_id);
   if(flag) {
-    logoImg.visible = "true";
+    logoImg.style.display = "block";
   } else {
-    logoImg.visible = "false";
+    logoImg.style.display = "none";
   }
 }
