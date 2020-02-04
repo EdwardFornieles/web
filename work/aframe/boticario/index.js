@@ -36,10 +36,13 @@ AFRAME.registerComponent('gallery', {
       showhide(true, 'index5');
 
       setTimeout(Rescan, 40000);
+
+      console.log("show");
     }
 
     // hideImage handles hiding the virtual object when the image target is lost
     const hideImage = () => {
+      console.log("hide");
     }
 
     const Rescan = () => {
@@ -48,6 +51,8 @@ AFRAME.registerComponent('gallery', {
       showhide(false, 'index3');
       showhide(false, 'index4');
       showhide(false, 'index5');
+
+      console.log("rescan");
     }
 
     // These events are routed and dispatched by xrextras-generate-image-targets
